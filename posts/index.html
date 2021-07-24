@@ -3,6 +3,7 @@ layout: page
 title: Posts
 background: '/img/bg-main.jpeg'
 ---
+<i class="fas fa-tags"></i>
 {% for tag in site.data.tags %}
 <span class="tag" data-tag="{{tag}}">
   {{ site.data.format[tag] }}
@@ -33,8 +34,9 @@ background: '/img/bg-main.jpeg'
     on {{ post.date | date: '%B %d, %Y' }} &middot; {% include read_time.html content=post.content %}
   </p>
 </article>
+<hr>
 </div>
-<!--<hr>-->
+
 
 {% endfor %}
 

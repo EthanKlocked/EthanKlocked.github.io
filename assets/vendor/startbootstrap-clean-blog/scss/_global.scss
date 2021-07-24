@@ -19,7 +19,7 @@ h3,
 h4,
 h5,
 h6 {
-    font-weight: 800;
+    font-weight: 500;
 }
 
 a {
@@ -81,6 +81,11 @@ img::-moz-selection {
     color:#848484;
     cursor: pointer;
     padding: 5px;
+
+    &:focus,
+    &:hover {
+        color: $primary;
+    }
 }
 .tag.selected{
     color:black;
@@ -91,4 +96,7 @@ img::-moz-selection {
     color:white;
     cursor: pointer;
     padding: 5px;
+}
+.icon_img{
+    width : 3%;
 }
