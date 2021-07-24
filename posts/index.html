@@ -34,6 +34,12 @@ background: '/img/bg-main.jpeg'
     on {{ post.date | date: '%B %d, %Y' }} &middot; {% include read_time.html content=post.content %}
   </p>
 </article>
+<i class="fas fa-hashtag"></i>
+  {% if post.tags %}
+    {% for tag in post.tags %}
+    <span class="tag" onclick="filterByTagName('{{tag}}')">{{ site.data.format[tag] }}</span>
+    {% endfor %}
+  {% endif %}
 <hr>
 </div>
 
