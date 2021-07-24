@@ -3,7 +3,11 @@ layout: page
 title: Posts
 background: '/img/bg-main.jpeg'
 ---
-
+{% for tag in site.data.tags %}
+<span class="tag" data-tag="{{tag}}">
+  {{ site.data.format[tag] }}
+</span>
+{% endfor %}  
 {% for post in paginator.posts %}
 <div class="post-wrapper"
 {% if post.tags %}
@@ -28,14 +32,9 @@ background: '/img/bg-main.jpeg'
     {% endif %}
     on {{ post.date | date: '%B %d, %Y' }} &middot; {% include read_time.html content=post.content %}
   </p>
-  {% for tag in site.data.tags %}
-    <span class="tag" data-tag="{{tag}}">
-      {{ site.data.format[tag] }}
-    </span>
-  {% endfor %}  
 </article>
 </div>
-<hr>
+<!--<hr>-->
 
 {% endfor %}
 

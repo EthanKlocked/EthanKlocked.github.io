@@ -74,3 +74,21 @@ img::-moz-selection {
     color: $white;
     background: transparent;
 }
+.hidden{
+    display: none;
+}
+.tag{
+    color:#848484;
+    cursor: pointer;
+    padding: 5px;
+}
+.tag.selected{
+    color:black;
+    cursor: pointer;
+    padding: 5px;
+}
+.tag_post{
+    color:white;
+    cursor: pointer;
+    padding: 5px;
+}

@@ -31,13 +31,6 @@ layout: default
 
         <!-- Home Post List -->
         {% for post in site.posts limit : 5 %}
-        
-        <div class="post-wrapper"
-        {% if post.tags %}
-          {% for tag in post.tags %}
-            data-{{ tag }}
-          {% endfor %}
-        {% endif %}>
         <article class="post-preview">
           <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}">
             <h2 class="post-title">{{ post.title }}</h2>
@@ -55,15 +48,8 @@ layout: default
             {% endif %}
             on
             {{ post.date | date: '%B %d, %Y' }} &middot; {% include read_time.html content=post.content %}            
-          </p>
-          {% for tag in site.data.tags %}
-          <span class="tag" data-tag="{{tag}}">
-            {{ site.data.format[tag] }}
-          </span>
-          
-          {% endfor %}            
+          </p>        
         </article>
-        </div>
         <hr>
 
         {% endfor %}
