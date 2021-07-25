@@ -100,3 +100,18 @@ img::-moz-selection {
 .icon_img{
     width : 3%;
 }
+
+.grid_container{
+    display : grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    row-gap: 10%;
+	column-gap: 8%;
+}
+#icon_title{
+    cursor: pointer;
+    padding: 5px;    
+}
+#icon_title:hover{
+    transition:0.5s;
+    transform: translateY(-20px);
+}

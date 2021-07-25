@@ -28,8 +28,15 @@ layout: default
       <div class="col-lg-8 col-md-10 mx-auto">
 
         {{ content }}
-
+        <div class = 'grid_container'>
+        {% for tag in site.data.tags %}
+        <div class="tag_box" data-tag="{{tag}}">
+          <i id = "icon_title" class="{{site.data.tag_icon[tag]}} fa-10x" style ="color : {{site.data.icon_color[tag]}}" onclick="tag_post('{{tag}}')"></i>
+        </div>
+        {% endfor %}  
+        </div>
         <!-- Home Post List -->
+        <!--
         {% for post in site.posts limit : 5 %}
         <article class="post-preview">
           <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}">
@@ -53,11 +60,13 @@ layout: default
         <hr>
 
         {% endfor %}
-
+        -->
         <!-- Pager -->
+        <!--
         <div class="clearfix">
           <a class="btn btn-primary float-right" href="{{"/posts" | relative_url }}">View All Posts &rarr;</a>
         </div>
+        -->
 
       </div>
     </div>
