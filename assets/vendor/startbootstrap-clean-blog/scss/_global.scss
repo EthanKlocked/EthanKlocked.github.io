@@ -103,10 +103,11 @@ img::-moz-selection {
 
 .grid_container{
     display : grid;
+    min-width: 50px;
     grid-template-columns: 1fr 1fr 1fr;
     row-gap: 10%;
 	column-gap: 8%;
-    width: 100%;
+    grid-auto-rows: minmax(100px, auto)
 }
 #icon_title{
     cursor: pointer;
