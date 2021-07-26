@@ -106,8 +106,8 @@ img::-moz-selection {
     min-width: 50px;
     min-height: 50px;	
     grid-template-columns: 1fr 1fr 1fr;
-    row-gap: 10%;
-	column-gap: 8%;
+    row-gap: 5%;
+    column-gap: 5%;
     grid-auto-rows: minmax(100px, auto)
 }
 #icon_title{
