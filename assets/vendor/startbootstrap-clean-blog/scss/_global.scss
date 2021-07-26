@@ -106,10 +106,11 @@ img::-moz-selection {
     grid-template-columns: 1fr 1fr 1fr;
     row-gap: 5%;
     column-gap: 5%;
+    width: 30%;
 }
 #icon_title{
-    width: 300%;
-    height: 300%;
+    width: 100%;
+    height: 100%;
     cursor: pointer;
     padding: 5%; 
 }
