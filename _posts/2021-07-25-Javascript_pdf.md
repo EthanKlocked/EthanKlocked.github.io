@@ -17,7 +17,7 @@ tags: [javascript]
 github.com/MrRio/jsPDF 에서 라이브러리를 받아서 사용하거나      
 해당 cdn을 적용      
 ``` javascript
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.3.1/jspdf.umd.min.js"></script>   
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.3.1/jspdf.umd.min.js"></script> 
 ```
 
 기본적인 사용방법은 직관적이다.   
@@ -60,31 +60,32 @@ autotable이라는 라이브러리로 jspdf라이브러리 추가기능으로 �
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.15/jspdf.plugin.autotable.min.js"></script>
 ```
 
+<br>
 
 ### autoTable 실행  
 
 ``` javascript
 
 doc.autoTable({
-	theme: 'grid', // 테마
-	tableWidth : 116, // 넓이
-	startX: 50, // 시작 X값
-	startY: 10, // 시작 Y값
-	margin: { left: 80, top: 10, right: 10 }, //여백
-	styles: { font: "MyFont", fontStyle: "normal" }, //폰트적용
-	body: [
-		[
-			{ content: "공급자", rowSpan: 5, styles: { halign: "center", valign: "middle" } }, 
-			{ content: "사업자번호", styles: { halign: "center" } },
-			{ content: "XXX-XX-XXXXX", colSpan: 3, styles: { halign: "center" } },
-		],
-		[
-			{ content: "상  호", styles: { halign: "center" } },
-			{ content: "(주)XXXX테크", styles: { halign: "center" } },
-			{ content: "대표자", styles: { halign: "center" } },
-			{ content: "XXX(인)", styles: { halign: "center" } },
-		],
+  theme: 'grid', // 테마
+  tableWidth : 116, // 넓이
+  startX: 50, // 시작 X값
+  startY: 10, // 시작 Y값
+  margin: { left: 80, top: 10, right: 10 }, //여백
+  styles: { font: "MyFont", fontStyle: "normal" }, //폰트적용
+  body: [
+	[
+		{ content: "공급자", rowSpan: 5, styles: { halign: "center", valign: "middle" } }, 
+		{ content: "사업자번호", styles: { halign: "center" } },
+		{ content: "XXX-XX-XXXXX", colSpan: 3, styles: { halign: "center" } },
 	],
+	[
+		{ content: "상  호", styles: { halign: "center" } },
+		{ content: "(주)XXXX테크", styles: { halign: "center" } },
+		{ content: "대표자", styles: { halign: "center" } },
+		{ content: "XXX(인)", styles: { halign: "center" } },
+	],
+  ],
 });
 ```
 
@@ -103,140 +104,138 @@ doc.autoTable(객체);
 ``` javascript
 //pdf 출력함수
 function pdf_print(esti_dt){
-	const { jsPDF } = window.jspdf;
+  const { jsPDF } = window.jspdf;
 
-	//pdf 생성
-	const doc = new jsPDF();
-	const myFont = m_font;
+//pdf 생성
+  const doc = new jsPDF();
+  const myFont = m_font;
 
-	//font설정 -> 맑은고딕
-	doc.addFileToVFS("MyFont.ttf", myFont);
-	doc.addFont("MyFont.ttf", "MyFont", "normal");
-	doc.setFont("MyFont");
+//font설정 -> 맑은고딕
+  doc.addFileToVFS("MyFont.ttf", myFont);
+  doc.addFont("MyFont.ttf", "MyFont", "normal");
+  doc.setFont("MyFont");
 
-	//text 넣기
-	doc.setFontSize(20);
-	doc.text(15, 30, '개발견적서');
-	doc.setFontSize(10);
-	doc.text(15, 45, '아래와 같이 견적합니다.');
+//text 넣기
+  doc.setFontSize(20);
+  doc.text(15, 30, '개발견적서');
+  doc.setFontSize(10);
+  doc.text(15, 45, '아래와 같이 견적합니다.');
 
 
-	//상단 Table 넣기
-	doc.autoTable({
-		theme: 'grid',
-	    tableWidth : 116,
-		startX: 50,
-		startY: 10,
-		margin: { left: 80, top: 10, right: 10 }, //여백
-		styles: { font: "MyFont", fontStyle: "normal" }, //폰트적용
-		body: [
-			[
-				{ content: "공급자", rowSpan: 5, styles: { halign: "center", valign: "middle" } },
-				{ content: "사업자번호", styles: { halign: "center" } },
-				{ content: "XXX-XX-XXXXX", colSpan: 3, styles: { halign: "center" } },
-			],
-			[
-				{ content: "상  호", styles: { halign: "center" } },
-				{ content: "(주)XXXX", styles: { halign: "center" } },
-				{ content: "대표자", styles: { halign: "center" } },
-				{ content: "XXX(인)", styles: { halign: "center" } },
-			],
-			[
-				{ content: "소 재 지", styles: { halign: "center" } },
-				{ content: "대전 유성구 배울1로 271(탑립동)", colSpan: 3, styles: { halign: "center" } },
-			],
-			[
-				{ content: "업 태", styles: { halign: "center" } },
-				{ content: "제조,도.소매", styles: { halign: "center" } },
-				{ content: "종 목", styles: { halign: "center" } },
-				{ content: "계량계측기 외", styles: { halign: "center" } },
-			],
-			[
-				{ content: "담 당 자", styles: { halign: "center" } },
-				{ content: "XXX", styles: { halign: "center" } },
-				{ content: "연 락 처", styles: { halign: "center" } },
-				{ content: "XXX-XXXX-XXXX", styles: { halign: "center" } },
-			],
+//상단 Table 넣기
+  doc.autoTable({
+	theme: 'grid',
+	tableWidth : 116,
+	startX: 50,
+	startY: 10,
+	margin: { left: 80, top: 10, right: 10 }, //여백
+	styles: { font: "MyFont", fontStyle: "normal" }, //폰트적용
+	body: [
+		[
+			{ content: "공급자", rowSpan: 5, styles: { halign: "center", valign: "middle" } },
+			{ content: "사업자번호", styles: { halign: "center" } },
+			{ content: "XXX-XX-XXXXX", colSpan: 3, styles: { halign: "center" } },
 		],
-	});
+		[
+			{ content: "상  호", styles: { halign: "center" } },
+			{ content: "(주)XXXX", styles: { halign: "center" } },
+			{ content: "대표자", styles: { halign: "center" } },
+			{ content: "XXX(인)", styles: { halign: "center" } },
+		],
+		[
+			{ content: "소 재 지", styles: { halign: "center" } },
+			{ content: "대전 유성구 배울1로 271(탑립동)", colSpan: 3, styles: { halign: "center" } },
+		],
+		[
+			{ content: "업 태", styles: { halign: "center" } },
+			{ content: "제조,도.소매", styles: { halign: "center" } },
+			{ content: "종 목", styles: { halign: "center" } },
+			{ content: "계량계측기 외", styles: { halign: "center" } },
+		],
+		[
+			{ content: "담 당 자", styles: { halign: "center" } },
+			{ content: "XXX", styles: { halign: "center" } },
+			{ content: "연 락 처", styles: { halign: "center" } },
+			{ content: "XXX-XXXX-XXXX", styles: { halign: "center" } },
+		],
+	],
+  });
 
 //********************************************************** 품목 data 하단 Table
-    var pdf_obj = new Object;
-    var pdf_arr = new Array;
-	pdf_obj.theme = 'grid';
-	pdf_obj.styles = { font: "MyFont", fontStyle: "normal" };
-	pdf_obj.tableLineColor = '#CEF6F5';
-	var esti_uid = esti_dt[14];
-	var esti_data = select_common('gene_esti', 'gees_uid', esti_uid);
-	var member_data = select_common('stnd_member', 'stme_uid', esti_data[1].gees_memuid);
-	console.log(member_data);
-	var item_data = select_common('gene_esti_sub', 'gees_uid', esti_uid);
-	console.log(esti_data);
-	var	esti_header = [
-		{ content: "거래처명", styles: { halign: "center", valign: "middle", fillColor: '#CEF6F5'} },
-		{ content: esti_data[1].stac_nm, colSpan: 4, styles: { halign: "center" } },
-	];
-	var	esti_columns = [
-		{ content: "품 목 명", styles: { halign: "center", valign: "middle", fillColor: '#CEF6F5' } },
-		{ content: "수  량", styles: { halign: "center", valign: "middle", fillColor: '#CEF6F5' } },
-		{ content: "단  가", styles: { halign: "center", valign: "middle", fillColor: '#CEF6F5' } },
-		{ content: "세  액", styles: { halign: "center", valign: "middle", fillColor: '#CEF6F5' } },
-		{ content: "금  액(원)", styles: { halign: "center", valign: "middle", fillColor: '#CEF6F5' } },
-	];
-	pdf_arr.push(esti_header);
-	pdf_arr.push(esti_columns);
-	var sum_price = 0;
-	for(d=1; d < 25; d++){
-		var sub_obj = new Object;
-		var sub_arr = new Array;
-		var geessu_item = '';
-		var geessu_qty = '';
-		var geessu_sprice = '';
-		var geessu_vprice = '';
-		var geessu_tprice = '';
-		if(item_data[d]){
-			sum_price += Number(item_data[d].geessu_tprice);
-			geessu_item = item_data[d].geessu_item;
-			geessu_qty = change_float(item_data[d].geessu_qty);
-			geessu_sprice = change_float(item_data[d].geessu_sprice);
-			geessu_vprice = change_float(item_data[d].geessu_vprice);
-			geessu_tprice = change_float(item_data[d].geessu_tprice);
-		}
-		var	esti_row = [
-			{ content: geessu_item, styles: { halign: "right", valign: "middle" } },
-			{ content: geessu_qty, styles: { halign: "right", valign: "middle" } },
-			{ content: geessu_sprice, styles: { halign: "right", valign: "middle" } },
-			{ content: geessu_vprice, styles: { halign: "right", valign: "middle" } },
-			{ content: geessu_tprice, styles: { halign: "right", valign: "middle" } },
-		];
-		pdf_arr.push(esti_row);
+  var pdf_obj = new Object;
+  var pdf_arr = new Array;
+  pdf_obj.theme = 'grid';
+  pdf_obj.styles = { font: "MyFont", fontStyle: "normal" };
+  pdf_obj.tableLineColor = '#CEF6F5';
+  var esti_uid = esti_dt[14];
+  var esti_data = select_common('gene_esti', 'gees_uid', esti_uid);
+  var member_data = select_common('stnd_member', 'stme_uid', esti_data[1].gees_memuid);
+  var item_data = select_common('gene_esti_sub', 'gees_uid', esti_uid);
+  var esti_header = [
+	{ content: "거래처명", styles: { halign: "center", valign: "middle" },
+	{ content: esti_data[1].stac_nm, colSpan: 4, styles: { halign: "center" } },
+  ];
+  var esti_columns = [
+	{ content: "품 목 명", styles: { halign: "center", valign: "middle"} },
+	{ content: "수  량", styles: { halign: "center", valign: "middle"} },
+	{ content: "단  가", styles: { halign: "center", valign: "middle"  } },
+	{ content: "세  액", styles: { halign: "center", valign: "middle" } },
+	{ content: "금  액(원)", styles: { halign: "center", valign: "middle" } },
+  ];
+  pdf_arr.push(esti_header);
+  pdf_arr.push(esti_columns);
+  var sum_price = 0;
+  for(d=1; d < 25; d++){
+	var sub_obj = new Object;
+	var sub_arr = new Array;
+	var geessu_item = '';
+	var geessu_qty = '';
+	var geessu_sprice = '';
+	var geessu_vprice = '';
+	var geessu_tprice = '';
+	if(item_data[d]){
+		sum_price += Number(item_data[d].geessu_tprice);
+		geessu_item = item_data[d].geessu_item;
+		geessu_qty = change_float(item_data[d].geessu_qty);
+		geessu_sprice = change_float(item_data[d].geessu_sprice);
+		geessu_vprice = change_float(item_data[d].geessu_vprice);
+		geessu_tprice = change_float(item_data[d].geessu_tprice);
 	}
-	var price_kor = num_to_str(String(sum_price));
-	var	total_columns = [
-		{ content: "합  계", styles: { halign: "center", valign: "middle", fillColor: '#CEF6F5' } },
-		{ content: "일금   "+price_kor+"정  (₩"+change_float(sum_price)+")", colSpan: 4, styles: { halign: "left" } },
+	var esti_row = [
+		{ content: geessu_item, styles: { halign: "right", valign: "middle" } },
+		{ content: geessu_qty, styles: { halign: "right", valign: "middle" } },
+		{ content: geessu_sprice, styles: { halign: "right", valign: "middle" } },
+		{ content: geessu_vprice, styles: { halign: "right", valign: "middle" } },
+		{ content: geessu_tprice, styles: { halign: "right", valign: "middle" } },
 	];
-	var	etc_columns = [
-		{ content: "참고사항", styles: { halign: "center", valign: "middle", fillColor: '#CEF6F5' }, fillColor: '#CEF6F5' },
-		{ content: "견적유효기간 : "+esti_data[1].gees_duedate, colSpan: 4, styles: { halign: "left" } },
-	];
-	var	final_columns = [
-		{ content: "담 당 자", styles: { halign: "center", valign: "middle", fillColor: '#CEF6F5' } },
-		{ content: member_data[1].stme_name, styles: { halign: "left" } },
-		{ content: "연 락 처", styles: { halign: "center", valign: "middle", fillColor: '#CEF6F5' } },
-		{ content: member_data[1].stme_email, styles: { halign: "left" } },
-		{ content: "결재방법 : "+esti_data[1].gees_case, styles: { halign: "center", valign: "middle" } },
-	];
-	pdf_arr.push(total_columns);
-	pdf_arr.push(etc_columns);
-	pdf_arr.push(final_columns);
-	pdf_obj.body = pdf_arr;
+	pdf_arr.push(esti_row);
+  }
+  var price_kor = num_to_str(String(sum_price));
+  var total_columns = [
+	{ content: "합  계", styles: { halign: "center", valign: "middle" } },
+	{ content: "일금   "+price_kor+"정  (₩"+change_float(sum_price)+")", colSpan: 4, styles: { halign: "left" } },
+  ];
+  var etc_columns = [
+	{ content: "참고사항", styles: { halign: "center", valign: "middle", fillColor: '#CEF6F5' } },
+	{ content: "견적유효기간 : "+esti_data[1].gees_duedate, colSpan: 4, styles: { halign: "left" } },
+  ];
+  var final_columns = [
+	{ content: "담 당 자", styles: { halign: "center", valign: "middle" } },
+	{ content: member_data[1].stme_name, styles: { halign: "left" } },
+	{ content: "연 락 처", styles: { halign: "center", valign: "middle" } },
+	{ content: member_data[1].stme_email, styles: { halign: "left" } },
+	{ content: "결재방법 : "+esti_data[1].gees_case, styles: { halign: "center", valign: "middle" } },
+  ];
+  pdf_arr.push(total_columns);
+  pdf_arr.push(etc_columns);
+  pdf_arr.push(final_columns);
+  pdf_obj.body = pdf_arr;
 //**********************************************************
-	doc.autoTable(pdf_obj);
-	doc.setProperties({
-		title: '견적서',
-	});
-	doc.save("estimate.pdf");
+  doc.autoTable(pdf_obj);
+  doc.setProperties({
+	title: '견적서',
+  });
+  doc.save("estimate.pdf");
 }
 ```
 <br>
