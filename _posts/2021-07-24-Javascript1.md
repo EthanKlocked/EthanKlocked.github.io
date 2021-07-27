@@ -38,7 +38,7 @@ Call Stack : 실행 순서에 따라 호출스택이 쌓이고 나가는 곳
 ### 3. 런타임 환경
 싱글스레드 기반, 콜백큐와 이벤트루프 사용   
 
-![Alt text](/img/callback_queue.png)   
+![Alt text](/img/callback_queue.png){: width="50%" height="50%"}   
 
 <br>
 
@@ -56,7 +56,7 @@ Call Stack : 실행 순서에 따라 호출스택이 쌓이고 나가는 곳
  
 <br>
 
-![Alt text](/img/event_loop.png) 
+![Alt text](/img/event_loop.png){: width="50%" height="50%"} 
 
 순서를 살펴보면, 호출스택에 들어온 명령이 비동기적 API(AJAX, setTimeout... ) 혹은 비동기함수(promise, callback)일 경우    
 호출스택에 쌓이자마자 빠져나가며 WEB API를 위한 비동기 환경으로 이동해 비동기적으로 동시에 처리된다.   
@@ -67,7 +67,7 @@ Call Stack : 실행 순서에 따라 호출스택이 쌓이고 나가는 곳
 
 <br>
 
-```javascript
+``` javascript
 function delay() {   
   for (var i = 0; i < 100000; i++);   
 }   
