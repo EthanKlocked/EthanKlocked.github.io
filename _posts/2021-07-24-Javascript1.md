@@ -37,8 +37,7 @@ Call Stack : 실행 순서에 따라 호출스택이 쌓이고 나가는 곳
 
 ### 3. 런타임 환경
 싱글스레드 기반, 콜백큐와 이벤트루프 사용   
-
-![Alt text](/img/callback_queue.png) {: width="50%" height="50%"}   
+<img src="/img/callback_queue.png" width="100%" height="100%">
 
 <br>
 
@@ -55,8 +54,7 @@ Call Stack : 실행 순서에 따라 호출스택이 쌓이고 나가는 곳
 이러한 제약에서 벗어나 연산량이 많은 코드를 지연없이 동시에 실행하는 방법이 비동기 방식이며 이러한 비동기처리는 콜스택 외부에서 실행되게 된다.   
  
 <br>
-
-![Alt text](/img/event_loop.png) {: width="50%" height="50%"} 
+<img src="/img/event_loop.png" width="100%" height="100%">
 
 순서를 살펴보면, 호출스택에 들어온 명령이 비동기적 API(AJAX, setTimeout... ) 혹은 비동기함수(promise, callback)일 경우    
 호출스택에 쌓이자마자 빠져나가며 WEB API를 위한 비동기 환경으로 이동해 비동기적으로 동시에 처리된다.   
