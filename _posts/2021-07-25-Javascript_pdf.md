@@ -16,19 +16,19 @@ tags: [javascript]
 ## 1.jsPDF 라이브러리 적용 및 테스트    
 github.com/MrRio/jsPDF 에서 라이브러리를 받아서 사용하거나      
 해당 cdn을 적용      
-```javascript
+``` javascript
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.3.1/jspdf.umd.min.js"></script>   
 ```
 
 기본적인 사용방법은 직관적이다.   
-```javascript
+``` javascript
 var doc = new jsPDF("p", "mm", "a4");
 doc.line(10, 10, 20, 10); // 선그리기(시작x, 시작y, 종료x, 종료y)
 doc.text(15, 40, '안녕하세요'); // 글씨입력(시작x, 시작y, 내용)
 doc.addImage('이미지src', 'JPEG', 시작x, 시작y, 넓이, 높이); //이미지 그리기
 doc.save('web.pdf');  // 다운로드 실행
 ```
-![Alt text](/img/n_kor.png) 
+<img src="/img/n_kor.png" width="100%" height="100%">
 
 <br>
 
@@ -41,13 +41,13 @@ var myFont = '결과값';
 
 <br>
 
-```javascript
+``` javascript
 doc.addFileToVFS("MyFont.ttf", myFont);   
 doc.addFont("MyFont.ttf", "MyFont", "normal"); //내부에 폰트추가   
 doc.setFont("MyFont"); //폰트 할당   
 ```
 
-![Alt text](/img/kor.png) 
+<img src="/img/kor.png" width="100%" height="100%">
 
 <br>
 
@@ -56,14 +56,14 @@ doc.setFont("MyFont"); //폰트 할당
 autotable이라는 라이브러리로 jspdf라이브러리 추가기능으로 사용이 가능하다.         
 먼저 cdn적용    
 
-```javascript
+``` javascript
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.15/jspdf.plugin.autotable.min.js"></script>
 ```
 
 
 ### autoTable 실행  
 
-```javascript
+``` javascript
 
 doc.autoTable({
 	theme: 'grid', // 테마
@@ -100,7 +100,7 @@ rowSpan, colSpan 값으로 행과 열의 할당범위 지정이 가능하다.
 마지막으로 결과 객체를 파라미터로 넣고 실행   
 doc.autoTable(객체);   
 
-```javascript
+``` javascript
 //pdf 출력함수
 function pdf_print(esti_dt){
 	const { jsPDF } = window.jspdf;
@@ -241,4 +241,4 @@ function pdf_print(esti_dt){
 ```
 <br>
 
-![Alt text](/img/estimate.png) 
+<img src="/img/estimate.png" width="100%" height="100%">
