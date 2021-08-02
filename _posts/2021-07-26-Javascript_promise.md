@@ -111,3 +111,74 @@ return된 Promise생성자는 .then으로 자기 자신을 호출하기 때문�
 then메소드는 Promise 객체 자신을 계속해서 호출하는 것이 가능하기 때문에 return값을 넘겨가며 계속해서 콜백함수를 연결실행하는 것이 가능하다.   
 
 Promise자체의 reject뿐만아니라 then으로 연결되는 로직 내부에서 에러가 발생하면 그 즉시 제어권을 catch함수로 넘겨주어 예외처리가 가능하게 한다.
+
+<br>
+
+# async / await 
+비동기 콜백에서 문제였던 가독성을 해결하고 좀 더 직관적인 표현을 가능하게 한 Promise 함수의 사용법을 살펴 보았다.
+그러나 Promise 실행 이후 내부에서 다시 Promise를 정의 및 실행을 하는 경우가 생기는데, 이 경우 콜백지옥과 크게 다르지 않은 난해함을 느낄 수 있다.
+ 
+ ``` javascript
+ function test_pro = {
+   return new Promise((resolve, reject) => {
+     resolve(1);
+   });
+ }
+ function test_pro2 = {
+   return new Promise((resolve, reject) => {
+     resolve(2);
+   });
+ }
+ function test_pro3 = {
+   return new Promise((resolve, reject) => {
+     resolve(3);
+   });
+ }
+ test_pro()
+ .then((data) => {
+   test_pro2()
+   .then((data2) => {
+     test_pro3()
+     .then((data3) => {
+       console.log(data3);
+     })
+   })
+ })
+
+ ```
+
+<br>
+ 이러한 Promise 중첩을 벗어날 수 있게 해주는 함수가 바로 async로 함수를 정의사고 와 await를 통한 동기화 이다.
+ 
+ ```javascript 
+ async function test(){
+   return 'ok';
+ }
+
+ async function test2(){
+   return 'not ok';
+ }
+
+ test()
+ .then((data) => {console.log(data)}); // ok
+
+ async function test2(){
+    let abc = await test();
+    let def = await test2();   
+    console.log(abc); // ok
+    console.log(abc);  //not ok
+ }
+
+async function test3(){
+  let all_test = await Promise.all([test(), test2()]);
+  console.log(all_test[0]); // ok
+  console.log(all_test[1]);  // not ok
+}
+ ```
+
+함수 앞에 async를 정의하게 되면 그 함수의 return 값은 Promise 객체로 변환되어 return된다.
+따라서, then()함수로 받아서 사용이 가능하며 동기화 하여 값을 변수에 담는 경우에는 await을 실행 구문 앞에 붙여준다.   
+await을 실행하게 되면 해당 함수가 실행 완료되기 전까지 다음 명령이 실행 되지 않기 때문에 동기와 다르지 않다.   
+이럴 경우에는 병렬 처리하고 싶은 async 함수들을 Promise.all([])의 배열 안에 나열하여 병렬로 실행 할 수 있다.
+
+* tip : await 구문을 한줄한줄 처리할 경우 동기방식이지만 각각의 async 함수를 변수에 담아 실행시킨 뒤 해당 변수를 await을 통해 받는 방식을 통해 비동기 처리를 직관적인 코드로 나타낼 수 있다.
