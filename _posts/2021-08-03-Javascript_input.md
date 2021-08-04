@@ -9,7 +9,10 @@ tags: [javascript]
 # html5 input 태그
 신규 패키지 프로그램 제작에 사용중인 DHTMLX API에 순정 input태그를 박아 넣어야 할 일이 생겼다.    
 UI상에서 보기에 DHTMLX 자체 제공 기능 중 FORM 형식이 아니라 GRID라고 하는 VIEW용도의 리스트 중 한 컬럼에 품목 개수를 입력 가능하게 해야하는 문제.   
-HTML5 새로운기능인 pattern 속성을 사용해 1000단위 콤마라던가 양의 정수라던가 이런저런 조건을 줄 수 있을 줄 알았는데 막상 사용해 보니 비밀번호라던지 전화번호 같은 
+
+<br>
+
+HTML5 새로운기능인 pattern 속성을 사용해 1000단위 콤마라던가 양의 정수라던가 이런저런 조건을 줄 수 있을 줄 알았는데 막상 사용해 보니 비밀번호라던지 전화번호 같은
 입력제한에 쓰이는 패턴밖에 없었다.
 모양도 별로고 막고싶은 패턴 전부를 막아낼 수 없었기 때문에 script로 직접 구현하였다.   
 
@@ -48,7 +51,7 @@ function inputNumberFormat(obj) {
 		if(obj.value < 0){ // 5. 음수일 경우 양수로
 			obj.value = -obj.value;
 		}
-		obj.value = change_float(obj.value); 6. 1000단위 콤마 (패키지함수 따로 구현) -> 2번으로
+		obj.value = change_float(obj.value); // 6. 1000단위 콤마 (패키지함수 따로 구현) -> 2번으로
 	}
 }
 //......
