@@ -24,7 +24,13 @@ async function create_empty_grid(){
 		columns: [
 			{ id: "stit_nm", header: [{ text: "품목명" }]},
 			{ id: "stit_cd", header: [{ text: "품목 코드"}]},
-			{ id: "qty", header: [{ text: "수량"}], htmlEnable: true, template: () => '<input id="qty_input" type="text" value ="1" onkeyup="inputNumberFormat(this)">'}, //input HTML
+			{
+				id: "qty", 
+				header: [{ text: "수량"}], 
+				htmlEnable: true, 
+				template: () => 
+				  '<input id="qty_input" type="text" value ="1" onkeyup="inputNumberFormat(this)">'
+			}, 
 		],
 		selection: 'multi',
 		autoWidth: true, 
