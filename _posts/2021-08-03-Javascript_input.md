@@ -3,7 +3,7 @@ layout: post
 title: "input 태그 금액표현"
 subtitle: "1000단위 콤마 / 양의 정수"
 date: 2021-07-26 19:45:13 -0400
-background: '/img/posts/05.jpg'
+background: '/img/posts/javascript-yel.jpeg'
 tags: [javascript]
 ---
 # html5 input 태그

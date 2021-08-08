@@ -3,7 +3,7 @@ layout: post
 title: "Javascript 비동기"
 subtitle: "동기와 비동기 / 블로킹과 논블로킹"
 date: 2021-07-26 18:45:13 -0400
-background: '/img/posts/05.jpg'
+background: '/img/posts/javascript-yel.jpeg'
 tags: [javascript]
 ---
 동기와 비동기, 그리고 블로킹의 개념은 싱글스레드를 사용하는 자바스크립트 언어에서 병렬 프로그래밍을 익히기 위한 중요한 개념이다.

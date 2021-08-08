@@ -3,7 +3,7 @@ layout: post
 title: "JavaScript ES6 문법정리"
 subtitle: "ECMAScript6"
 date: 2021-07-26 17:45:13 -0400
-background: '/img/posts/05.jpg'
+background: '/img/posts/javascript-yel.jpeg'
 tags: [javascript]
 ---
 # 자바스크립트 ES6(ECMAScript 6)

@@ -3,7 +3,7 @@ layout: post
 title: "JavaScript PDF파일 생성"
 subtitle: "jsPDF, autoTable"
 date: 2021-07-25 16:45:13 -0400
-background: '/img/posts/05.jpg'
+background: '/img/posts/javascript-yel.jpeg'
 tags: [javascript]
 ---
 # JSPDF 사용법

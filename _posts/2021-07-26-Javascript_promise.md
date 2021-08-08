@@ -3,7 +3,7 @@ layout: post
 title: "JavaScript Promise"
 subtitle: "Promise / async / await"
 date: 2021-07-26 19:45:13 -0400
-background: '/img/posts/05.jpg'
+background: '/img/posts/javascript-yel.jpeg'
 tags: [javascript]
 ---
 # Callback 함수란?

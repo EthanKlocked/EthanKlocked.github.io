@@ -3,7 +3,7 @@ layout: post
 title: "JavaScript 코드 동작원리"
 subtitle: "엔진, 인터프리터"
 date: 2021-07-23 15:45:13 -0400
-background: '/img/posts/05.jpg'
+background: '/img/posts/javascript-yel.jpeg'
 tags: [javascript]
 ---
 ##  구동원리
