@@ -3,7 +3,7 @@ layout: post
 title: "PHP 가변변수"
 subtitle: "가변변수를 통한 변수명 동적생성"
 date: 2021-09-02 20:45:13 -0400
-background: '/img/posts/javascript-yel.jpeg'
+background: '/img/posts/php.png'
 tags: [php]
 ---
 PHP상에서의 변수는 '$' 뒤에 변수명을 적어서 선언한다.
