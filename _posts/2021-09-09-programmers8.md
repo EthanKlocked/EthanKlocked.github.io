@@ -33,7 +33,7 @@ tags: [code, python]
 
 # 풀이
 
-``` python3
+``` python
 def solution(weights, head2head):
     num = list(range(1,len(head2head)+1)) #1234
     answer = quick_sort(num, weights, head2head)
