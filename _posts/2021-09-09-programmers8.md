@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "프로그래머스 모의고사"
-subtitle: "완전탐색 / 구현"
+title: "프로그래머스 복서정렬"
+subtitle: "퀵정렬 "
 date: 2021-09-09 16:24:11 -0400
 background: '/img/posts/cube.jpeg'
 tags: [code, python]
