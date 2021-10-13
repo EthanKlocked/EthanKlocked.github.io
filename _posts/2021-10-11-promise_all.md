@@ -10,7 +10,7 @@ tags: [javascript]
 
 순차적으로 리스트 row에 한줄씩 jquery animate효과를 주기 위해 'setTimeout' 사용
 
-<br>
+</br>
 
 ``` javascript
 //async default time
