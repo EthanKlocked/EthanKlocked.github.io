@@ -32,7 +32,7 @@ function time_ani(index, node){
 # Promise.all
 해당 배열을 map을 통해 순차적으로 promise함수로 던져준다. 해당 배열의 모든 promise 객체가 'fullfilled'상태가 되면 then을 통해 실행
 
-</br>
+<br>
 
 ``` javascript
 var result_ani = Promise.all($('.list_css').eq(0).children().map((index, node) => time_ani(index, node)))
