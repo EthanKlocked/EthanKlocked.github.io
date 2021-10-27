@@ -2,7 +2,7 @@
 layout: post
 title: "프로그래머스 오픈채팅방"
 subtitle: "다이나믹 프로그래밍"
-date: 2021-10-27 08:31:44 -0400
+date: 2021-10-26 08:31:44 -0400
 background: '/img/posts/cube.jpeg'
 tags: [code, python]
 ---
