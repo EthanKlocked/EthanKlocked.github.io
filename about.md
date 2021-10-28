@@ -1,8 +1,9 @@
 ---
 layout: page
-title: About Me
-description: Hello! I am growing developer.
+title: About
+permalink: /about/
 background: '/img/bg-main.jpeg'
+description: Hello! I am growing developer.
 ---
 
 ## 보유기술 
