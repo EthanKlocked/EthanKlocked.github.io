@@ -6,7 +6,7 @@ date: 2021-10-11 18:43:10 -0400
 background: '/img/posts/javascript-yel.jpeg'
 tags: [javascript]
 ---
-# 실행함수
+## 실행함수
 
 순차적으로 리스트 row에 한줄씩 jquery animate효과를 주기 위해 'setTimeout' 사용
 
@@ -27,7 +27,7 @@ function time_ani(index, node){
 ```
 
 
-# Promise.all
+## Promise.all
 해당 배열을 map을 통해 순차적으로 promise함수로 던져준다. 해당 배열의 모든 promise 객체가 'fullfilled'상태가 되면 then을 통해 실행
 
 
