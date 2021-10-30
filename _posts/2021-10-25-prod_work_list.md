@@ -3,7 +3,7 @@ layout: post
 title: "작업관리 WEB"
 subtitle: "smart factory"
 date: 2021-10-25 08:35:32 -0400
-background: '/img/posts/factory-2030.jpeg'
+background: '/img/posts/smart-f-02.png'
 tags: [javascript, workspace]
 ---
 ## 기능설명

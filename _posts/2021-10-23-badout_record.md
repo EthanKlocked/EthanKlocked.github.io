@@ -3,7 +3,7 @@ layout: post
 title: "조건부 리스트"
 subtitle: "smart factory"
 date: 2021-10-25 23:44:32 -0400
-background: '/img/posts/factory-2030.jpeg'
+background: '/img/posts/smart-f-02.png'
 tags: [php, workspace]
 ---
 ## 기능설명

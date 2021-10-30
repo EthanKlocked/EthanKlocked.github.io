@@ -3,7 +3,7 @@ layout: post
 title: "태블릿용 작업관리"
 subtitle: "smart factory"
 date: 2021-10-27 11:44:32 -0400
-background: '/img/posts/factory-2030.jpeg'
+background: '/img/posts/smart-f-02.png'
 tags: [javascript, workspace]
 ---
 ## 기능설명

@@ -3,7 +3,7 @@ layout: post
 title: "공정별 불량현황"
 subtitle: "smart factory"
 date: 2021-10-27 11:44:32 -0400
-background: '/img/posts/factory-2030.jpeg'
+background: '/img/posts/smart-f-02.png'
 tags: [javascript, workspace]
 ---
 ## 기능설명
