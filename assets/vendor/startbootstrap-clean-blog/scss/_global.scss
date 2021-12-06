@@ -104,7 +104,7 @@ img::-moz-selection {
 .grid_container{
     display : grid;
     grid-template-columns: 1fr 1fr 1fr;
-    row-gap: 10%;
+    row-gap: 8%;
     column-gap: 5%;
     place-items: center;    
 }
