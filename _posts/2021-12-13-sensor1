@@ -1,0 +1,283 @@
+---
+layout: post
+title: "실시간 센서데이터 테스트"
+subtitle: "smart factory"
+date: 2021-12-13 05:35:32 -0400
+background: '/img/posts/smart-f-02.png'
+tags: [javascript, workspace]
+---
+## 기능설명
+* 온습도, 전력, 이산화탄소, 미세먼지, 카운트 데이터 실시간 출력
+* 각 센서데이터는 개별적으로 움직이며 데이터 갱신 간격, y축 단위 조정 가능.
+
+<br>
+
+## 구현 화면
+
+<img src="/img/work/sensor_test.png" width="100%" height="100%"> 	
+
+<br>
+
+## 코드
+
+``` javascript
+/*
+	##### 수정로그 #####
+	2021.11.25 김현중 신규
+*/
+//**************************************** GLOBAL ********************************************//
+// widget
+var layout;
+
+var graph_obj = function(){
+	this.temp_graph; // temperature
+	this.humi_graph; // humidity
+	this.elec_graph; // electronic
+	this.co2_graph; // carbon dioxide
+	this.aero_graph; // aerosol (air polution)
+	this.cnt_graph; // count
+};
+
+var graph_box = new graph_obj();
+
+// data
+var data_obj = function(){
+	this.temp_dat; // temperature
+	this.humi_data; // humidity
+	this.elec_data; // electronic
+	this.co2_data; // carbon dioxide
+	this.aero_data; // aerosol (air polution)
+	this.cnt_data; // count
+}
+
+//*************************************** EXECUTION ******************************************//
+$(() => { 
+	//<<<<<<<<<<<< CREATE WIDGET >>>>>>>>>>>>>>
+	//layout
+	layout = create_layout();
+
+	//graph
+	graph_box.temp_graph = create_graph('온도(℃)', '#FF4500', 100, 0);
+	graph_box.humi_graph = create_graph('습도(%)', '#1E90FF', 100, 0);
+	graph_box.elec_graph = create_graph('전력(KW)', '#DAA520', 10, 0);
+	graph_box.co2_graph = create_graph('CO2(ppm)', '#DCDCDC', 800, 0);
+	graph_box.aero_graph = create_graph('미세먼지(㎍)', '#FFE4E1', 100, 0);
+	graph_box.cnt_graph = create_graph('개수(EA)', '#9ACD32', 1000, 0);
+
+	layout.getCell('temp_third').attach(graph_box.temp_graph);
+	layout.getCell('humi_third').attach(graph_box.humi_graph);
+	layout.getCell('elec_third').attach(graph_box.elec_graph);
+	layout.getCell('co2_third').attach(graph_box.co2_graph);
+	layout.getCell('aero_third').attach(graph_box.aero_graph);
+	layout.getCell('cnt_third').attach(graph_box.cnt_graph);
+
+	select_data('TE0001', 'temp', 1000, '온도(℃)', 5);
+	select_data('HU0001', 'humi', 1000, '습도(%)', 5);
+	select_data('CE0001', 'elec', 1000, '전력(KW)', 5);
+	select_data('CO20001', 'co2', 1000, 'CO2(ppm)', 5);
+	select_data('FD0001', 'aero', 1000, '미세먼지(㎍)', 5);
+	select_data('CNT0001', 'cnt', 1000, '개수(EA)', 5);
+});
+
+//*************************************** CONFIG & LOGIC ******************************************//
+//LAYOUT [Main] (5*2)
+function create_layout(){
+	return new dhx.Layout("layout", { //LAYOUT
+		rows: [
+			{
+				padding:'15px',
+				type: "wide",
+				cols: [
+					{	
+						width: "33%",
+						rows: [
+							{
+								height:"33%",
+								header: "온 도",
+								id: "temp_first",
+								html: `<div>
+											<i style = "color:#FF0000" class="xi-factory xi-5x"><\/i>
+											<i style = "color:#FF0000" class="xi-thermometer xi-3x"></i>
+											<span id ="temp" class= "number">0</span>
+									   <\/div>`
+										
+							},
+							{
+								height:"63%",
+								id: "temp_third",
+								html: "세팅시간(분) : 0"
+							},
+						]
+					},
+					{	
+						width: "33%",
+						rows: [
+							{
+								height:"33%",
+								header: "습 도",
+								id: "humi_first",
+								html: `<div>
+											<i style = "color:#4169E1" class="xi-factory xi-5x"><\/i><i style = "color:#4169E1" class="xi-tint xi-3x"></i>
+											<span id ="humi" class= "number">0</span>
+									   <\/div>`
+							},
+							{
+								height:"63%",
+								id: "humi_third",
+								html: "세팅시간(분) : 0"
+							},
+						]
+					},
+					{	
+						width: "33%",
+						rows: [
+							{
+								height: "33%",
+								header: "전 류",
+								id: "elec_first",
+								html: `<div>
+											<i style = "color:#FF9614" class="xi-warning xi-5x"><\/i><i style = "color:#FF9614" class="xi-flash xi-3x"></i>
+											<span id ="elec" class= "number">0</span>
+									   <\/div>`
+							},
+							{
+								height:"63%",
+								id: "elec_third",
+								html: "세팅시간(분) : 0"
+							},
+						]
+					},
+				]
+			},
+			{
+				padding:'15px',
+				type: "wide",
+				cols: [
+					{	
+						width: "33%",
+						rows: [
+							{
+								height: "33%",
+								header: "이 산 화 탄 소",
+								id: "co2_first",
+								html: `<div>
+											<i style = "color:#778899" class="xi-cloud xi-5x"><\/i><i style = "color:#778899" class="xi-tornado xi-3x"></i>
+											<span id ="co2" class= "number">0</span>
+									   <\/div>`
+							},
+							{
+								height:"63%",
+								id: "co2_third",
+								html: "세팅시간(분) : 0"
+							},
+						]
+					},
+					{	
+						width: "33%",
+						rows: [
+							{
+								height: "33%",
+								header: "미 세 먼 지",
+								id: "aero_first",
+								html: `<div>
+											<i style = "color:#6A5ACD" class="xi-foggy xi-5x"><\/i><i style = "color:#6A5ACD" class="xi-blackberry xi-3x"></i>
+											<span id ="aero" class= "number">0</span>
+									   <\/div>`
+							},
+							{
+								height:"63%",
+								id: "aero_third",
+								html: "세팅시간(분) : 0"
+							},
+						]
+					},
+					{	
+						width: "33%",
+						rows: [
+							{
+								height: "33%",
+								header: "수 량",
+								id: "cnt_first",
+								html: `<div>
+											<i style = "color:#6B8E23" class="xi-apps xi-5x"><\/i><i style = "color:#6B8E23" class="xi-plus-circle xi-3x"></i>
+											<span id ="cnt" class= "number">0</span>
+									   <\/div>`
+							},
+							{
+								height:"63%",
+								id: "cnt_third",
+								html: "세팅시간(분) : 0"
+							},
+						]
+					},
+				]
+			},
+		]
+	});
+}
+
+//GRAPH [spline]
+function create_graph(name, color, max, min){
+	return new dhx.Chart("", {
+		type: "splineArea",
+		scales: {
+			"bottom": {
+				text: "seconds"
+			},
+			"left": {
+				maxTicks: 5,
+				max: max,
+				min: min
+			}
+		},
+		series: [
+			{
+				id: "main_idx",
+				value: name,
+				color: color
+			},
+		],
+		legend: {
+			series: ["main_idx"],
+			halign: "right",
+			valign: "top"
+		},
+	});
+}
+//*************************************** FUNCTION [QUERY] ******************************************//
+function select_data(code, name, delay, unit, max_length){
+	var span_node = name + 'first';
+	var data_arr = new Array();
+	data_arr.push({'seconds' : now_now(), [unit] : Number(0)})
+	setInterval(function(){
+		select_async('',[{
+							'table':'denex_test',
+							'column' : ['value'],
+							'order' : {'reg_time':'desc'},
+							'limit' : [0,1],	
+							'where':{and:[{column : 'code', 'type' : '=', 'data' : code}]}
+						}]
+		).then((result_data)=>{
+			result_data = result_data.data[Object.keys(result_data.data)[0]];	
+			$(`#${name}`).text(result_data[0].value);
+
+			if(data_arr.length > max_length){
+				data_arr.shift();
+			}
+			data_arr.push({'seconds' : now_now(), [unit] : Number(result_data[0].value)})
+			graph_box[name+'_graph'].data.parse(data_arr);
+		});		
+	}, delay);
+}
+
+//now seconds
+function now_now(){
+	var now_today = new Date();   
+	var now_hours = now_today.getHours();
+	var now_minutes = now_today.getMinutes() < 10 ? '0'+now_today.getMinutes() : now_today.getMinutes();
+	var now_seconds = now_today.getSeconds() < 10 ? '0'+now_today.getSeconds() : now_today.getSeconds();
+	return `${now_hours} : ${now_minutes} : ${now_seconds}`
+}
+
+
+```
