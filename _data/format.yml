@@ -3,5 +3,6 @@ php: PHP
 python: Python
 nodejs: Node.js
 java: Java
+swift: Swift
 workspace: Workspace
 code: Code
