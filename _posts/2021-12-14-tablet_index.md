@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "태블릿용 작업관리"
+title: "바코드 스캐너 활용"
 subtitle: "smart factory"
 date: 2021-12-14 13:44:32 -0400
 background: '/img/posts/smart-f-02.png'
