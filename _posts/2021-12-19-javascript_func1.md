@@ -1,9 +1,9 @@
 ---
 layout: post
-title: "JS 날짜 포맷, 평일일수"
-subtitle: "only 28+ 일수 체크"
-date: 2021-12-19 13:30:43 -0400
-background: '/img/posts/javascript-yel.jpeg
+title: "JavaScript 코드 동작원리"
+subtitle: "엔진, 인터프리터"
+date: 2021-12-19 15:45:13 -0400
+background: '/img/posts/javascript-yel.jpeg'
 tags: [javascript]
 ---
 
