@@ -6,6 +6,7 @@ date: 2021-12-19 13:30:43 -0400
 background: '/img/posts/javascript-yel.jpeg
 tags: [javascript]
 ---
+
 ## 설명
 javascript 기본 날짜형식 (Date)을 입력받아    
 날짜형식에 맞게 yyyy-mm-dd 변환   
