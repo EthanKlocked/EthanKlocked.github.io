@@ -4,5 +4,6 @@ python: Python
 nodejs: Node.js
 java: Java
 swift: Swift
+react: React
 workspace: Workspace
 code: Code
