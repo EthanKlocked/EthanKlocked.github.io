@@ -51,7 +51,16 @@ for($i=0; $i < count($data); $i++){
     // <<<<<<<<<<<<<<<<<<<<<<<<<< QUERY >>>>>>>>>>>>>>>>>>>>>>>>>>>>
     //----OUT----//
     //SELECT STOK RECORD
-    $out_select_sql = "SELECT stre_nowqty FROM stok_record WHERE stit_uid = {$stit_uid} and stwa_uid = {$out_stwa_uid} and stwara_uid = {$stwara_uid} ORDER BY stre_uid DESC LIMIT 1";
+    $out_select_sql = "SELECT 
+                        stre_nowqty 
+                       FROM 
+                        stok_record 
+                       WHERE 
+                        stit_uid = {$stit_uid} and 
+                        stwa_uid = {$out_stwa_uid} and 
+                        stwara_uid = {$stwara_uid} 
+                       ORDER BY 
+                        stre_uid DESC LIMIT 1";
 
     $out_select_result = query($out_select_sql);    
     if(!$out_select_result){
@@ -99,7 +108,16 @@ for($i=0; $i < count($data); $i++){
         }else{
         //----IN----//
             //SELECT STOK RECORD
-            $select_sql = "SELECT stre_nowqty FROM stok_record WHERE stit_uid = {$stit_uid} and stwa_uid = {$stwa_uid} and stwara_uid = {$stwara_uid} ORDER BY stre_uid DESC LIMIT 1";
+            $select_sql = "SELECT 
+                            stre_nowqty 
+                           FROM 
+                            stok_record 
+                           WHERE 
+                            stit_uid = {$stit_uid} and 
+                            stwa_uid = {$stwa_uid} and 
+                            stwara_uid = {$stwara_uid} 
+                           ORDER BY 
+                            stre_uid DESC LIMIT 1";
 
             $select_result = query($select_sql);    
             if(!$select_result){
