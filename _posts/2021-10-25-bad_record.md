@@ -55,7 +55,19 @@ $semi_sql = "SELECT
                 c.stpr_uid, 
                 c.prba_qty, 
                 c.prba_status,
-                CONCAT(SUBSTRING(c.prba_regdate,1,4),'-',SUBSTRING(c.prba_regdate,5,2),'-',SUBSTRING(c.prba_regdate,7,2),' ',SUBSTRING(c.prba_regdate,9,2),':',SUBSTRING(c.prba_regdate,11,2),':',SUBSTRING(c.prba_regdate,13,2)) AS prba_regdate,
+                CONCAT(
+                 SUBSTRING(c.prba_regdate,1,4),
+                 '-',
+                 SUBSTRING(c.prba_regdate,5,2),
+                 '-',
+                 SUBSTRING(c.prba_regdate,7,2),
+                 ' ',
+                 SUBSTRING(c.prba_regdate,9,2),
+                 ':',
+                 SUBSTRING(c.prba_regdate,11,2),
+                 ':',
+                 SUBSTRING(c.prba_regdate,13,2)
+                ) AS prba_regdate,
                 d.stbaty_nm,
                 e.stit_nm
             FROM 
