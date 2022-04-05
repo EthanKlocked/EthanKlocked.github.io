@@ -51,7 +51,17 @@ $select_sql = "SELECT
                     a.prpl_num,
                     IFNULL(
                         CONCAT(
-                            SUBSTRING(a.prpl_real_time,1,4),'-',SUBSTRING(a.prpl_real_time,5,2),'-',SUBSTRING(a.prpl_real_time,7,2),' ',SUBSTRING(a.prpl_real_time,9,2),':',SUBSTRING(a.prpl_real_time,11,2),':',SUBSTRING(a.prpl_real_time,13,2)
+                            SUBSTRING(a.prpl_real_time,1,4),
+                            '-',
+                            SUBSTRING(a.prpl_real_time,5,2),
+                            '-',
+                            SUBSTRING(a.prpl_real_time,7,2),
+                            ' ',
+                            SUBSTRING(a.prpl_real_time,9,2),
+                            ':',
+                            SUBSTRING(a.prpl_real_time,11,2),
+                            ':',
+                            SUBSTRING(a.prpl_real_time,13,2)
                         ),
                         '대기'
                     ) as prpl_real_time,
@@ -61,7 +71,17 @@ $select_sql = "SELECT
                     c.stli_nm,
                     IFNULL(
                         CONCAT(
-                            SUBSTRING(e.prwo_endtime,1,4),'-',SUBSTRING(e.prwo_endtime,5,2),'-',SUBSTRING(e.prwo_endtime,7,2),' ',SUBSTRING(e.prwo_endtime,9,2),':',SUBSTRING(e.prwo_endtime,11,2),':',SUBSTRING(e.prwo_endtime,13,2)
+                            SUBSTRING(e.prwo_endtime,1,4),
+                            '-',
+                            SUBSTRING(e.prwo_endtime,5,2),
+                            '-',
+                            SUBSTRING(e.prwo_endtime,7,2),
+                            ' ',
+                            SUBSTRING(e.prwo_endtime,9,2),
+                            ':',
+                            SUBSTRING(e.prwo_endtime,11,2),
+                            ':',
+                            SUBSTRING(e.prwo_endtime,13,2)
                         ),
                         '진행'
                     ) as prwo_endtime,
