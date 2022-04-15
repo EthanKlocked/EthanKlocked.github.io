@@ -106,7 +106,8 @@ img::-moz-selection {
     grid-template-columns: 1fr 1fr 1fr;
     row-gap: 5%;
     column-gap: 5%;
-    place-items: center;    
+    place-items: center; 
+    margin-bottom:20px;
 }
 #icon_title{
     cursor: pointer;
