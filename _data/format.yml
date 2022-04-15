@@ -5,5 +5,6 @@ nodejs: Node.js
 java: Java
 swift: Swift
 react: React
+android: Android
 workspace: Workspace
 code: Code
