@@ -32,7 +32,7 @@ tags: [react]
 <br>
 
 ### 구현 결과
-<img src="/img/work/rn_login.png" width="100%" height="100%"> 	
+<img src="/img/work/rn_login.png" width="50%" height="50%"> 	
 
 <br>
 
