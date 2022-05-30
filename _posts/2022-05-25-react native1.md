@@ -20,8 +20,13 @@ tags: [react]
 
 <br>
 
+### NPM 개발환경 세팅화면
+<img src="/img/work/rn_execute1.png" width="100%" height="100%"> 	
+<img src="/img/work/rn_execute2.png" width="100%" height="100%"> 	
+
+<br>
 ### 구현 결과
-<img src="/img/work/search.gif" width="100%" height="100%"> 	
+<img src="/img/work/rn_login.png" width="100%" height="100%"> 	
 
 <br>
 
