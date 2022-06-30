@@ -22,7 +22,7 @@ tags: [code, python]
 
 ## 풀이
 
-``` python3
+``` python
 def solution(s):
     answer = len(s)
     for i in range(int(len(s)/2)):
