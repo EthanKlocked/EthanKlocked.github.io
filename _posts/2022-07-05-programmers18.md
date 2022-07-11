@@ -34,3 +34,10 @@ def solution(w,h):
         return w*h-cf*blank(w/cf,h/cf)
     return w*h-blank(w,h)
 ```
+
+
+
+``` python
+def gcd(a,b): return b if (a==0) else gcd(b%a,a)    
+def solution(w,h): return w*h-w-h+gcd(w,h)
+```
