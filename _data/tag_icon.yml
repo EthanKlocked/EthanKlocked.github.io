@@ -6,6 +6,6 @@ java: fab fa-java
 swift: fab fa-swift
 react: fab fa-react
 android: fab fa-android
-server: fa-solid fa-server
+server: fa-duotone fa-server
 workspace: fas fa-file-word
 code: fas fa-laptop-code
