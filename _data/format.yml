@@ -6,5 +6,6 @@ java: Java
 swift: Swift
 react: React
 android: Android
+server: Server
 workspace: Workspace
 code: Code
