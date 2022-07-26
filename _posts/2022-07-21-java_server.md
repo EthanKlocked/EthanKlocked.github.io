@@ -38,7 +38,7 @@ home 컨트롤러(최초 라우팅 기능)로 연결
 </html>
 ```
 <br>
-<img style="border: solid grey 2px;" src="/img/posts/jsp_index.png" width="100%" height="100%"> 	
+<img style="border: solid grey 2px;" src="/img/posts/jsp_index.png" width="50%" height="50%"> 	
 <br>
 
 ## 2. controller 패키지 생성
@@ -128,7 +128,7 @@ loginform.jsp 파일은 input 입력값을 DoLogin 컨트롤러로 전달 (key�
 ```
 
 <br>
-<img style="border: solid grey 2px;" src="/img/posts/jsp_login.png" width="100%" height="100%"> 	
+<img style="border: solid grey 2px;" src="/img/posts/jsp_login.png" width="50%" height="50%"> 	
 <br>
 
 ## 4. model/service 영역 생성
@@ -219,6 +219,6 @@ public class CustomerService {
 
 ```
 <br>
-<img style="border: solid grey 2px;" src="/img/posts/jsp_welcome.png" width="100%" height="100%"> 	
+<img style="border: solid grey 2px;" src="/img/posts/jsp_welcome.png" width="50%" height="50%"> 	
 <br>
 
