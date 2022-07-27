@@ -53,6 +53,6 @@ local 서버의 demo 프로젝트 실행
 <img style="border: solid grey 2px;" src="/img/posts/spring_server_play.png" width="50%" height="50%"> 	
 <br>
 내용없음 화면이 뜨면 성공
-<img style="border: solid grey 2px;" src="/img/posts/spring_server_test.png" width="50%" height="50%"> 	
+<img style="border: solid grey 2px;" src="/img/posts/spring_index_test.png" width="50%" height="50%"> 	
 
 
