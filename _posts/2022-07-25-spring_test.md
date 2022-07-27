@@ -6,12 +6,6 @@ date: 2022-07-25 17:13:11 -0400
 background: '/img/posts/java.jpeg'
 tags: [java, server]
 ---
-## 0. 사전세팅
-* IDE 설치 (Spring Tool Suite4)
-* REST API 테스트용 POSTMAN 설치
-
-<br>
-
 ## 1. STS 설치
 URL : https://spring.io/tools   
 OS환경에 맞춰 다운로드   
