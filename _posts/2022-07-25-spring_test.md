@@ -11,7 +11,6 @@ URL : https://spring.io/tools
 OS환경에 맞춰 다운로드   
 작업 폴더에서 실행 시 압축이 풀리고 실행파일(SpringToolSuite4.exe) 사용 가능   
 
-<br>
 <img style="border: solid grey 2px;" src="/img/posts/springTool.png" width="50%" height="50%"> 	
 <br>
 
@@ -19,7 +18,6 @@ OS환경에 맞춰 다운로드
 URL : https://www.postman.com/downloads   
 다운로드 후 설치
 
-<br>
 <img style="border: solid grey 2px;" src="/img/posts/postman.png" width="50%" height="50%"> 	
 <br>
 
@@ -32,7 +30,6 @@ dependencies: Spring Web
 etc...Default 선택           
 generate    
 
-<br>
 <img style="border: solid grey 2px;" src="/img/posts/springboot.png" width="50%" height="50%"> 	
 <br>
   
@@ -43,10 +40,13 @@ generate한 project import(Maven/Existing Maven Projects 선택)
 빌드 버전 에러 발생 시 해당 JRE 설치 후 프로젝트 build path에 라이브러리를 추가해 주어야 한다.   
 
 <br>
-local 서버의 demo 프로젝트 실행
-<img style="border: solid grey 2px;" src="/img/posts/spring_server_play.png" width="50%" height="50%"> 	
+
+local 서버의 demo 프로젝트 실행   
+<img style="border: solid grey 2px;" src="/img/posts/spring_server_play.png" width="50%" height="50%"> 	 
+
 <br>
-내용없음 화면이 뜨면 성공
+
+내용없음 화면이 뜨면 성공   
 <img style="border: solid grey 2px;" src="/img/posts/spring_index_test.png" width="50%" height="50%"> 	
 
 
