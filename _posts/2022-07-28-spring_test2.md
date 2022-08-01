@@ -212,6 +212,8 @@ public interface MembersService {
 
 ```
 
+<br>
+
 ##### MembersServiceImpl.java
 dao 객체를 return하도록 수정   
 List 자료형 내 Member bean이 담겨 return   
