@@ -236,3 +236,9 @@ public class MembersServiceImpl implements MembersService{
 	}
 }
 ```
+
+<br>
+
+##### web client result page
+
+<img style="border: solid grey 2px;" src="/img/posts/spring_db_result.png" width="50%" height="50%"> 	
