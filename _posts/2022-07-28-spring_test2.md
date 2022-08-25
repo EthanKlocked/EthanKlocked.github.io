@@ -83,7 +83,7 @@ pom.xml을 통해 세팅된 driver를 사용하여 db정보 세팅 파일 생성
 spring.datasource.driver-class-name=org.mariadb.jdbc.Driver
 spring.datasource.url=jdbc:mariadb://127.0.0.1:3306/testdb
 spring.datasource.username=testUser
-spring.datasource.password=sherlocked
+spring.datasource.password=*********
 ```
 
 <br>
