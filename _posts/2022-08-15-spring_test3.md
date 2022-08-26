@@ -6,7 +6,7 @@ date: 2022-08-15 08:13:11 -0400
 background: '/img/posts/java.jpeg'
 tags: [java, server]
 ---
-## 1. 테스트 서버 PC 재부팅 후 에러 발생
+## 테스트 서버 PC 재부팅 후 에러 발생
 
 <br>
 
