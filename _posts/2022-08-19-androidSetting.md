@@ -22,9 +22,14 @@ tags: [android, javascript]
     3. 새로 열린 자식페이지 개발자도구에서 해당 크롬접속에 대한 콘솔 창 확인 가능
 
 <br>
+
 ### 진입 및 디버깅 화면
-<img src="/img/posts/inspectReady.png" width="50%" height="50%"> 	
-<img src="/img/posts/inspectResult.png" width="50%" height="50%"> 	
+
+<img src="/img/posts/inspectReady.png" width="90%" height="90%"> 	
+
+<br>
+
+<img src="/img/posts/inspectResult.png" width="90%" height="90%"> 	
 
 <br>
 
