@@ -82,6 +82,7 @@ export { CacheContext, CacheContextProvider };
 * 해당 라우터 명이 page key의 value라면 해당 캐시저장 데이터 사용
 * 캐시 scrollIndex 값으로 타겟팅하여 스크롤바 이동
 * updateCache 함수를 사용하여 필요 타이밍 캐시 초기화
+* 캐시 확인 및 초기화로 인한 리렌더링 방지를 위해 각 영역 Memorizing (useMemo)
 
 ``` jsx
 //------------------------------ MODULE -------------------------------------
