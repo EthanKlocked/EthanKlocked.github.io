@@ -23,8 +23,8 @@ tags: [android, javascript]
 
 <br>
 ### 진입 및 디버깅 화면
-<img src="/img/posts/cacheTest2.gif" width="50%" height="50%"> 	
-<img src="/img/posts/cacheTest2.gif" width="50%" height="50%"> 	
+<img src="/img/posts/inspectReady.png" width="50%" height="50%"> 	
+<img src="/img/posts/inspectResult.png" width="50%" height="50%"> 	
 
 <br>
 
