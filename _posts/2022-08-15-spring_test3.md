@@ -116,5 +116,7 @@ Caused by: java.sql.SQLInvalidAuthorizationSpecException: (conn=...) Access deni
 * test 데이터베이스 접근권한 체크
 * 3306 포트 체크
 
+<br>
+
 ##### 해결
 * 3306 포트에 mysql이 실행되고 있어 문제 발생, 해당 프로세스 종류 후 재접속
