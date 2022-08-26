@@ -38,7 +38,7 @@ tags: [react]
 <br>
 
 ### 구현 결과
-<img src="/img/posts/cacheTest.gif" width="30%" height="30%"> 	
+<img src="/img/posts/cacheTest2.gif" width="30%" height="30%"> 	
 
 <br>
 
