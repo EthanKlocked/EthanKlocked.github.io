@@ -203,4 +203,4 @@ public class MembersServiceImpl implements MembersService{
 ##### type : JSON
 ##### return : 추가된 member 객체
 
-<img style="border:solid grey 2px" src="/img/posts/postmanPost.png" width="80%" height="80%"> 	  
+<img style="border:solid grey 2px" src="/img/posts/postmanPost.png" width="100%" height="100%"> 	  
