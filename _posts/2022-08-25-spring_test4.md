@@ -15,7 +15,7 @@ API 출력결과 확인
 
 ##### url : GET/ http://localhost:8080/members
 
-<img style="border: solid grey 2px;" src="/img/posts/spring_db_result.png" width="100%" height="100%"> 	  
+<img style="border: solid grey 2px;" src="/img/posts/postmanGet.png" width="100%" height="100%"> 	  
 
 <br>
 
@@ -127,6 +127,6 @@ public interface MembersDAO {
 
 ##### url : GET/ http://localhost:8080/members/1
 
-<img style="border: solid grey 2px;" src="/img/posts/spring_db_result.png" width="100%" height="100%"> 	
+<img style="border: solid grey 2px;" src="/img/posts/postmanGetList.png" width="100%" height="100%"> 	
 
 
