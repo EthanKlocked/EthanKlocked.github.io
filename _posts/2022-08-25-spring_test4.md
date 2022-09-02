@@ -15,7 +15,7 @@ API 출력결과 확인
 
 ##### url : GET/ http://localhost:8080/members
 
-<img style="border: solid grey 2px;" src="/img/posts/postmanGet.png" width="70%" height="70%"> 	  
+<img style="border:solid grey 2px" src="/img/posts/postmanGet.png" width="80%" height="80%"> 	  
 
 <br>
 
@@ -127,5 +127,5 @@ public interface MembersDAO {
 
 ##### url : GET/ http://localhost:8080/members/1
 
-<img style="border: solid grey 2px;" src="/img/posts/postmanGetList.png" width="70%" height="70%"> 	
+<img style="border:solid grey 2px" src="/img/posts/postmanGetList.png" width="80%" height="80%"> 	
 
