@@ -209,4 +209,4 @@ public class MembersServiceImpl implements MembersService{
 ##### type : JSON
 ##### return : 쿼리 반환 카운트 1 일 경우(성공) update된 member 객체
 
-<img style="border:solid grey 2px" src="/img/posts/postmanPost.png" width="100%" height="100%"> 	  
+<img style="border:solid grey 2px" src="/img/posts/postmanPut.png" width="100%" height="100%"> 	  
