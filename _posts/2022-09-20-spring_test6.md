@@ -205,7 +205,7 @@ public class MembersServiceImpl implements MembersService{
 
 ## API 테스트
 ##### url : GET/ http://localhost:8080/members/1
-##### parameters : { "name": "Aelimu", "age": 21, "dept": "Marketing" } (Amy -> Aelimu 변경)
+##### parameters : { "name": "Aelimu", "age": 21, "dept": "Marketing" } 
 ##### type : JSON
 ##### return : 쿼리 반환 카운트 1 일 경우(성공) update된 member 객체
 
