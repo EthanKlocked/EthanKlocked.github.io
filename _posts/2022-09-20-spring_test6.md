@@ -72,7 +72,7 @@ public interface MembersDAO {
 
 <br>
 
-##### MembersDto/Member.java
+##### MembersDTO/Member.java
 ``` java
 package com.example.demo.dto;
 
