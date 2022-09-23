@@ -206,14 +206,14 @@ public class MembersServiceImpl implements MembersService{
 <br>
 
 ##### 삭제 전 데이터
-<img style="border:solid grey 2px" src="/img/posts/postmanPut.png" width="100%" height="100%"> 	  
+<img style="border:solid grey 2px" src="/img/posts/postmanDelete1.png" width="100%" height="100%"> 	  
 
 <br>
 
 ##### 삭제 시 화면
-<img style="border:solid grey 2px" src="/img/posts/postmanPut.png" width="100%" height="100%"> 	  
+<img style="border:solid grey 2px" src="/img/posts/postmanDelete2.png" width="100%" height="100%"> 	  
 
 <br>
 
 ##### 성공 후 다시 조회
-<img style="border:solid grey 2px" src="/img/posts/postmanPut.png" width="100%" height="100%"> 	  
+<img style="border:solid grey 2px" src="/img/posts/postmanDelete3.png" width="100%" height="100%"> 	  
