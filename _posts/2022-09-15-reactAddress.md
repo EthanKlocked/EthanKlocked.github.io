@@ -22,7 +22,7 @@ tags: [react]
 
 * 사용자 주소 등록
 
-``` JSX
+``` javascript
 const AddressAdd = () => {
     //context
     const { self, setSelfHandler } = useContext(SelfContext);
