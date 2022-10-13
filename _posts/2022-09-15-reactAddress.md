@@ -191,24 +191,30 @@ const AddressAdd = () => {
     const postModalGear = useMemo(() => {
         return(
             <Modal 
-                option={{
-                    width : "90%", 
-                    height : "70%", 
-                    textAlign : "left",
-                    alignContent : "center",  
-                    fontSize : "0.8em", 
-                    sink : 1,
-                    motion: true,
-                }}
+                option={
+                    {
+                        width : "90%", 
+                        height : "70%", 
+                        textAlign : "left",
+                        alignContent : "center",  
+                        fontSize : "0.8em", 
+                        sink : 1,
+                        motion: true,
+                    }
+                }
                 type={0} 
-                data={{
-                    desc : <Postcode complete={postcodeCallback}/>
-                }}
+                data={
+                    {
+                        desc : <Postcode complete={postcodeCallback}/>
+                    }
+                }
                 state={postModal} 
-                vUse={{
-                    v:v, 
-                    closeEvent: () => modalClose()
-                }}
+                vUse={
+                    {
+                        v:v, 
+                        closeEvent: () => modalClose()
+                    }
+                }
             />
         )
     }, [postModal, v]);            
@@ -216,19 +222,23 @@ const AddressAdd = () => {
     const alertModalGear = useMemo(() => {
         return(
             <Modal 
-                option={{
-                    width : "70%", 
-                    height : "15%", 
-                    textAlign : "center",
-                    alignContent : "stretch",  
-                    fontSize : "0.8em", 
-                    buttonStyle : 'bold',
-                    buttonName: ["확인"],
-                }} 
+                option={
+                    {
+                        width : "70%", 
+                        height : "15%", 
+                        textAlign : "center",
+                        alignContent : "stretch",  
+                        fontSize : "0.8em", 
+                        buttonStyle : 'bold',
+                        buttonName: ["확인"],
+                    }
+                } 
                 type={1} 
-                data={{
-                    desc : msgData[alertModal]
-                }}
+                data={
+                    {
+                        desc : msgData[alertModal]
+                    }
+                }
                 state={alertModal}
                 closeEvent={() => setAlertModal(false)} 
             />
@@ -238,19 +248,23 @@ const AddressAdd = () => {
     const completeModalGear = useMemo(() => {
         return(
             <Modal 
-                option={{
-                    width : "70%", 
-                    height : "15%", 
-                    textAlign : "center",
-                    alignContent : "stretch",  
-                    fontSize : "0.8em", 
-                    buttonStyle : 'bold',
-                    buttonName: ["확인"],
-                }} 
+                option={
+                    {
+                        width : "70%", 
+                        height : "15%", 
+                        textAlign : "center",
+                        alignContent : "stretch",  
+                        fontSize : "0.8em", 
+                        buttonStyle : 'bold',
+                        buttonName: ["확인"],
+                    }
+                } 
                 type={1} 
-                data={{
-                    desc : completeModal
-                }}
+                data={
+                    {
+                        desc : completeModal
+                    }
+                   }
                 state={completeModal}
                 closeEvent={() => {
                     navigate(-1);
