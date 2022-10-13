@@ -26,7 +26,7 @@ tags: [react, php]
 
 * 팀생성 -> 주문생성 -> 결제요청 API
 
-``` js
+``` javascript
     const orderExec = async() => {
         if(defaultDelivery == 'empty' || defaultDelivery == 'blank') return setOrderAlert('isNotAddress');
         if(!paymentType) return setOrderAlert('isNotPayment');
@@ -170,7 +170,6 @@ tags: [react, php]
 
                 if($updateRes != '000' && $updateRes != '001') $res = 'updateErr';
             }
-            //if(!empty($responseJson['code']) && $responseJson['code'] == "INVALID_CARD_EXPIRATION") $res = 'invalid';
         }catch(Exception $e){
             $res = 'systemErr';
         }
