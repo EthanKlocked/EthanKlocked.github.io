@@ -199,11 +199,11 @@ const AddressAdd = () => {
                     fontSize : "0.8em", 
                     sink : 1,
                     motion: true,
-                /\}\}/ 
+                }}
                 type={0} 
                 data={{
                     desc : <Postcode complete={postcodeCallback}/>
-                /\}\}/
+                }}
                 state={postModal} 
                 vUse={{
                     v:v, 
