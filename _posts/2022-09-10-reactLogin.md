@@ -21,6 +21,8 @@ tags: [react, php]
     1. localStorage에 저장
     2. API header에 담아 통신
 
+<br>
+
 ### 서버 로직
 * 토큰 발행 및 검증
     1. 고유 키값을 서버 key를 이용해 암호화
