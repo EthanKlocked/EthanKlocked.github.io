@@ -29,7 +29,6 @@ tags: [react]
 <br>
 
 ### 구현 결과
-<img src="/img/posts/LoginPage.png" width="30%" height="30%"> 	
 <img src="/img/posts/PhoneLoginGIF.gif" width="30%" height="30%"> 	
 <br>
 
