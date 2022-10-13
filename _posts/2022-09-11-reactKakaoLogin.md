@@ -27,7 +27,7 @@ tags: [react]
 ### 구현 결과
 
 #### 인증방법 선택화면
-<img src="/img/posts/kakaoLogin2.png" width="30%" height="30%"> 	
+<img src="/img/posts/kakaoLogin2.PNG" width="30%" height="30%"> 	
 
 #### 이미 회원일 경우 동의절차 생략
 <img src="/img/posts/kakaoLogin.gif" width="30%" height="30%"> 	
