@@ -22,7 +22,7 @@ tags: [react]
 
 * 사용자 기본 결제수단 저장
 
-``` JSX
+``` javascript
 const PaymentUpdate = () => {
     //context
     const { self, setSelfHandler } = useContext(SelfContext);
