@@ -222,20 +222,24 @@ const PaymentUpdate = () => {
     const alertModalGear = useMemo(() => {
         return(
             <Modal 
-                option={{
-                    width : "70%", 
-                    height : "8em", 
-                    textAlign : "center",
-                    alignContent : "stretch",  
-                    fontSize : "1em", 
-                    buttonStyle : 'bold',
-                    buttonName: ["확인"],
-                }} 
+                option={
+                    {
+                        width : "70%", 
+                        height : "8em", 
+                        textAlign : "center",
+                        alignContent : "stretch",  
+                        fontSize : "1em", 
+                        buttonStyle : 'bold',
+                        buttonName: ["확인"],
+                    }
+                } 
                 type={1} 
-                data={{
-                    desc : msgData[alertModal],
-                    title: "결제 수단 등록 실패"
-                }}
+                data={
+                    {
+                        desc : msgData[alertModal],
+                        title: "결제 수단 등록 실패"
+                    }
+                }
                 state={alertModal}
                 closeEvent={() => setAlertModal(false)} 
             />
