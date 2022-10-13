@@ -182,7 +182,7 @@ tags: [react, php]
 
 ### 일반결제
 
-<img src="/img/posts/CreditOrder.gif" width="30%" height="30%"> 	
+<img src="/img/posts/CreditOrderGIF.gif" width="30%" height="30%"> 	
 
 <br>
 
