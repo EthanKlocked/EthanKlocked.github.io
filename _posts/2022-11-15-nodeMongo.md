@@ -201,11 +201,17 @@ module.exports = router;
 #### Create
 <img src="/img/posts/node_mongo_post.png" width="90%" height="90%"> 	
 
+<br>
+
 #### Read
 <img src="/img/posts/node_mongo_get.png" width="90%" height="90%"> 	
 
+<br>
+
 #### Update
 <img src="/img/posts/node_mongo_put.png" width="90%" height="90%"> 	
+
+<br>
 
 #### Delete
 <img src="/img/posts/node_mongo_delete.png" width="90%" height="90%"> 	
