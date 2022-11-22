@@ -199,13 +199,13 @@ module.exports = router;
 ### CRUD TEST
 
 #### Create
-<img src="/img/posts/node_mongo_post.png" width="100%" height="100%"> 	
+<img src="/img/posts/node_mongo_post.png" width="90%" height="90%"> 	
 
 #### Read
-<img src="/img/posts/node_mongo_get.png" width="100%" height="100%"> 	
+<img src="/img/posts/node_mongo_get.png" width="90%" height="90%"> 	
 
 #### Update
-<img src="/img/posts/node_mongo_put.png" width="100%" height="100%"> 	
+<img src="/img/posts/node_mongo_put.png" width="90%" height="90%"> 	
 
 #### Delete
-<img src="/img/posts/node_mongo_delete.png" width="100%" height="100%"> 	
+<img src="/img/posts/node_mongo_delete.png" width="90%" height="90%"> 	
