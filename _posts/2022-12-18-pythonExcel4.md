@@ -75,4 +75,4 @@ exe = EXE(
 
 ##### 아나콘다 prompt창 내 pyinstaller excelMerge.spec 명령 실행
 
-<img src="/img/posts/anaconda_designer_ui1.png" width="90%" height="90%"> 	
+<img src="/img/posts/excelMergeTest.gif" width="90%" height="90%"> 	
