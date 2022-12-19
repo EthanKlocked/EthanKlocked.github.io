@@ -71,6 +71,9 @@ exe = EXE(
     icon='C:\\Users\\user\\spyderZero\\272697_excel_icon.ico'
 )
 ```
+
+<br>
+
 #### exe 컴파일 및 최종 테스트
 
 ##### 아나콘다 prompt창 내 pyinstaller excelMerge.spec 명령 실행
