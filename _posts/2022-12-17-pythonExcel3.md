@@ -22,7 +22,7 @@ tags: [python]
 
 #### 사전 UI 파일 작성
 
-<img src="/img/posts/github_merge.png" width="90%" height="90%"> 	
+<img src="/img/posts/anaconda_designer_ui1.png" width="90%" height="90%"> 	
 
 <br>
 
