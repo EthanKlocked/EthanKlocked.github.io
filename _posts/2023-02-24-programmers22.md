@@ -22,7 +22,7 @@ tags: [code, python]
 ## 제한사항
 
 * 1 ≤ numbers의 길이 ≤ 10,000
-* 1 ≤ numbers의 원소 ≤ 1015
+* 1 ≤ numbers의 원소 ≤ 10^15
 <br>
 
 ## 풀이
