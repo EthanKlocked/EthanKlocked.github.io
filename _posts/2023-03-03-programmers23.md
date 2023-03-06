@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "프로그래머스 표현 가능한 이진트리"
-subtitle: "다이나믹프로그래밍/탑다운/1의 보수"
+title: "프로그래머스 1,2,3 떨어트리기"
+subtitle: "그래프/재귀함수/큐"
 date: 2023-03-03 18:35:01 -0400
 background: '/img/posts/cube.jpeg'
 tags: [code, python]
