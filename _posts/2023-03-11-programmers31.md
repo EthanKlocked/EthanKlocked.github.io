@@ -2,7 +2,7 @@
 layout: post
 title: "프로그래머스 무인도 여행"
 subtitle: "그래프 / BFS"
-date: 2023-03-09 18:25:30 -0400
+date: 2023-03-11 12:54:12 -0400
 background: '/img/posts/cube.jpeg'
 tags: [code, python]
 ---
