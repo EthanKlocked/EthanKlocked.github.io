@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "프로그래머스 광물캐기"
+title: "프로그래머스 당구 연습"
 subtitle: "구현 / 시뮬레이션"
 date: 2023-03-16 09:17:25 -0400
 background: '/img/posts/cube.jpeg'
