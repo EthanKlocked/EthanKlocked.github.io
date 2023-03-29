@@ -44,6 +44,8 @@ def solution(numbers):
     return [x[0] for x in answer]
 ```
 
+<br>
+
 ## 프로세스 설명
 * 반복문 중첩하여 두번 돌릴 경우 O(N^2) 실패
 * numbers 리스트를 역으로 순회
