@@ -73,4 +73,5 @@ def solution(numbers):
 * stack 방식으로 후입 선출 프로세스 진행
 * numbers 리스트를 0부터 순회하며 각 index를 stack에 입력
 * 매 index 탐색 시 해당 index의 값이 stack 마지막 값보다 큰 경우 차례대로 stack에서 꺼내 해당 index값을 해당 값으로 치환
+* stack에 쌓여있는 값들은 점점 작아지는 value 의 index 이므로 처음으로 해당 값보다 큰 값이 나왔을 경우, 하나씩 꺼내면서 검사한다.
 * O(2N)으로 해결 가능
