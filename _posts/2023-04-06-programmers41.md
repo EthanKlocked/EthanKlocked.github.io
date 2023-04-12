@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "프로그래머스 달리기경주"
-subtitle: "메모이제이션 / index"
+title: "프로그래머스 연속된 부분 수열의 합"
+subtitle: "최적화문제"
 date: 2023-04-06 15:33:54 -0400
 background: '/img/posts/cube.jpeg'
 tags: [code, python]
