@@ -13,7 +13,7 @@ tags: [swift]
 * intent, 카카오로그인, 카카오링크 설정
 * 카메라 기능, 업로드 연동 설정
 
-<div>
+<div stlye="padding: 1em; background:#eee;">
     <img src="/img/work/alldeal_ios_login.jpg" width="20%" height="20%"> 	
     <img src="/img/work/alldeal_ios_main.jpg" width="20%" height="20%"> 	
     <img src="/img/work/alldeal_ios_desc.jpg" width="20%" height="20%"> 	
