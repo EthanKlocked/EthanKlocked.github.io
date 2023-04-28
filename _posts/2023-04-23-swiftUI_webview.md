@@ -9,7 +9,7 @@ tags: [swift]
 
 ### Preview
 
-<img src="/img/work/alldeal_ios_main.jpg" width="70%" height="70%"> 	
+<img src="/img/work/alldeal_ios_main.jpg" width="30%" height="30%"> 	
 
 <br>
 
