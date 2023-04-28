@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Swift UI WebView2"
-subtitle: "xcode / intent"
+subtitle: "Camera permission / image upload"
 date: 2023-04-24 17:23:11 -0400
 background: '/img/posts/apple.jpeg'
 tags: [swift]
@@ -9,7 +9,19 @@ tags: [swift]
 
 ### Preview
 
-<img src="/img/posts/swiftUITest.png" width="70%" height="70%"> 	
+* 웹뷰 페이지 컨트롤 및 뒤로가기 설정
+* intent, 카카오로그인, 카카오링크 설정
+* 카메라 기능, 업로드 연동 설정
+
+<div>
+    <img src="/img/work/alldeal_ios_login.jpg" width="25%" height="25%"> 	
+    <img src="/img/work/alldeal_ios_main.jpg" width="25%" height="25%"> 	
+    <img src="/img/work/alldeal_ios_desc.jpg" width="25%" height="25%"> 	
+    <img src="/img/work/alldeal_ios_guide.jpg" width="25%" height="25%"> 	
+    <img src="/img/work/alldeal_ios_mypage.jpg" width="25%" height="25%"> 	
+    <img src="/img/work/alldeal_ios_team.jpg" width="25%" height="25%"> 	
+    <img src="/img/work/alldeal_ios_myteam.jpg" width="25%" height="25%"> 	
+</div>
 
 <br>
 
@@ -53,6 +65,9 @@ struct ContentView_Previews: PreviewProvider {
 <br>
 
 #### WebView.swift
+
+* 카메라 권한허용 체크 추가
+* 업로드 연동기능 추가
 
 ``` swift
 
