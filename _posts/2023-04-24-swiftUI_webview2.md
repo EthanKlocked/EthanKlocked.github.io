@@ -14,7 +14,7 @@ tags: [swift]
 * 카메라 기능, 업로드 연동 설정
 
 <div>
-    <img src="/img/work/alldeal_ios_login.jpg" width="20%" height="20%" margin: "30px"> 	
+    <img src="/img/work/alldeal_ios_login.jpg" width="20%" height="20%" style="margin: 30px"> 	
     <img src="/img/work/alldeal_ios_main.jpg" width="20%" height="20%" padding: "2em"> 	
     <img src="/img/work/alldeal_ios_desc.jpg" width="20%" height="20%" padding: "2em"> 	
     <img src="/img/work/alldeal_ios_guide.jpg" width="20%" height="20%" padding: "2em"> 	
