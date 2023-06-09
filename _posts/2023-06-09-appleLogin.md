@@ -31,10 +31,6 @@ tags: [php, react]
 
 <br>
 
-### 구현 결과
-<img src="/img/posts/PhoneLoginGIF.gif" width="30%" height="30%"> 	
-<br>
-
 * 초기 로그인 리퀘스트
 
 ``` javascript
