@@ -21,7 +21,8 @@ x축과 y축으로 이루어진 2차원 직교 좌표계에 중심이 원점인 
 
 ## 풀이
 
-``` pythonimport math
+``` python
+import math
 def solution(r1, r2):
     cnt = 0
     for i in range(1, r2):
