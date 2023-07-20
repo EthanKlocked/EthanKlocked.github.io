@@ -2,7 +2,7 @@
 layout: post
 title: "프로그래머스 두 원 사이의 정수 쌍"
 subtitle: "완전탐색 / 구현"
-date: 2023-07-20 14:20:42 -0400
+date: 2023-07-19 14:20:42 -0400
 background: '/img/posts/cube.jpeg'
 tags: [code, python]
 ---
