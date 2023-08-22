@@ -22,6 +22,8 @@ tags: [react]
 
 ### hook을 통해 코드 전역적으로 사용 테스트 (data에 따라 hook분리)
 
+<br>
+
 ##### get Data
 ``` javascript
 //------------------------------ MODULE --------------------------------
@@ -57,6 +59,8 @@ export default function useUser(errorCallback = () => {}){
     return [userData.data, update];
 }
 ```
+
+<br>
 
 ##### UPDATE POST DELETE DATA
 
