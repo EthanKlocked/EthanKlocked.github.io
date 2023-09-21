@@ -106,6 +106,6 @@ export default function useUserMutate(){
       * 초과하지 않은 경우 내부 쿼리함수 실행 없이 cache데이터 사용
 2. key데이터의 cacheTime
       * 초과한 경우에도 데이터 구독중인 컴포넌트 내에서는 여전히 cache 사용 가능
-3. key데이터 invalidateQuery (stale화) 진행직후 1회 구독 중인 컴포넌트 함수 재실행 발생
-4. 쿼리 재실행 로직이 진행되더라도 key에 할당된 데이터(including obj, arr)에 변경점이 없다면 data변경 없음으로 판단(로컬로 진행하였기 때문에 추후 서버데이터 변경에 따른 추가 테스트 필요)
+3. key데이터 invalidateQuery (stale화) 진행직후 기본옵션으로 인해 refetch 자동발생 (refetcjType:none 옵션 통해 방지)
+4. stale화가 아니라 update가 필요할 경우 refetch메소드 실행하면 그 즉시 쿼리 1회 재실행
 
