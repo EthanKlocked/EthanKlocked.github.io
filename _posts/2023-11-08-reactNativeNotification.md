@@ -24,7 +24,7 @@ tags: [react]
 
 ##### Fireabase 앱 생성 및 키 세팅
 
-<img src="/img/posts/firebase_regi.png" width="90%" height="90%"> 	
+<img src="/img/posts/firebase_regi.PNG" width="90%" height="90%"> 	
 <br>
 
 ##### IOS APN 키 발급 및 세팅
