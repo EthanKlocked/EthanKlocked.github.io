@@ -35,6 +35,7 @@ tags: [react, android, ios]
 * 생성된 인증서를 firebase앱 내 세팅
 <img src="/img/posts/apn_set.png" width="90%" height="90%"> 	
 <br>
+<br>
 
 ##### 라이브러리 설치 및 코드작성
 * 앱 초기실행 시 background 수신 세팅 /index.js 
@@ -48,7 +49,7 @@ import messaging from '@react-native-firebase/messaging';
 messaging().setBackgroundMessageHandler(async remoteMessage => {
     console.log('Message handled in the background!', remoteMessage);
 });
-
+<br>
 AppRegistry.registerComponent(appName, () => App);
 ```
 
@@ -79,7 +80,7 @@ function App(): JSX.Element {
 
 export default App;
 ```
-
+<br>
 * foreground 수신을 위한 라이브러리 사용 함수 src/lib/pushNoti.js
 ``` javascript
 import notifee, { AndroidImportance } from '@notifee/react-native';
@@ -103,7 +104,7 @@ const displayNotification = async message => {
 
 export default remoteMessage => displayNotification(remoteMessage);
 ```
-
+<br>
 * 디바이스 토큰 송신을 위한 함수 src/lib/setDeviceToken.js
 ``` javascript
 //------------------------------ MODULE --------------------------------
@@ -153,3 +154,4 @@ export default async function setDeviceToken(){
 <br>
 
 ##### 구동 테스트
+*  Firebase 내 테스트 송신 시나리오 활용 or 서버 연동하여 디바이스 타게팅 테스트
