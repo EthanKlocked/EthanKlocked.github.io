@@ -46,7 +46,7 @@ tags: [react, android, ios]
 
 ##### 라이브러리 설치 및 코드작성
 
-* 앱 초기실행 시 background 수신 세팅 /index.js 
+* 앱 초기실행 시 background 수신 세팅
 ``` javascript
 import {AppRegistry} from 'react-native';
 import App from './App';
@@ -62,7 +62,7 @@ AppRegistry.registerComponent(appName, () => App);
 
 <br>
 
-* 앱 초기실행 시 foreground 수신 세팅 /app.js (tsx) 
+* 앱 초기실행 시 foreground 수신 세팅
 ``` javascript
 //------------------------------ MODULE --------------------------------
 import React, { useEffect } from 'react';
@@ -92,7 +92,7 @@ export default App;
 
 <br>
 
-* foreground 수신을 위한 라이브러리 사용 함수 src/lib/pushNoti.js
+* foreground 수신을 위한 라이브러리 사용 함수 
 ``` javascript
 import notifee, { AndroidImportance } from '@notifee/react-native';
 
@@ -118,7 +118,7 @@ export default remoteMessage => displayNotification(remoteMessage);
 
 <br>
 
-* 디바이스 토큰 송신을 위한 함수 src/lib/setDeviceToken.js
+* 디바이스 토큰 송신을 위한 함수 
 ``` javascript
 //------------------------------ MODULE --------------------------------
 import messaging from '@react-native-firebase/messaging';
