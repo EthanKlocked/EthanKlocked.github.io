@@ -122,6 +122,7 @@ export default remoteMessage => displayNotification(remoteMessage);
 <br>
 
 * 디바이스 토큰 송신을 위한 함수 ./lib/setDeviceToken.js
+
 ``` javascript
 //------------------------------ MODULE --------------------------------
 import messaging from '@react-native-firebase/messaging';
