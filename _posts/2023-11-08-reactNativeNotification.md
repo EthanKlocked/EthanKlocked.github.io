@@ -12,6 +12,7 @@ tags: [react, android, ios]
 * 모바일 내 앱 구동/미구동(백그라운드) 상태에서 알림 UI 노출
 
 <br>
+<br>
 
 ### 세팅 순서
 1. Firebase 내 IOS/Android 앱 생성
@@ -21,23 +22,30 @@ tags: [react, android, ios]
 5. react native 라이브러리를 통한 코드 세팅 (토큰 송신, 알림 수신)
 
 <br>
+<br>
 
 ##### Fireabase 앱 생성 및 키 세팅
 
 * IOS/Android 각 생성 및 안내에 따라 각 JSON파일/코드세팅
-<img src="/img/posts/firebase_regi.PNG" width="50%" height="50%"> 	
+<img src="/img/posts/firebase_regi.PNG" width="50%" height="50%">
+
+<br>
 <br>
 
 ##### IOS APN 키 발급 및 세팅
 * Apple Push Notification 연동을 위해 key 혹은 certificate 인증서 생성
 <img src="/img/posts/apn_cert.png" width="90%" height="90%">
 
+<br>
+
 * 생성된 인증서를 firebase앱 내 세팅
-<img src="/img/posts/apn_set.png" width="90%" height="90%"> 	
+<img src="/img/posts/apn_set.png" width="90%" height="90%">
+
 <br>
 <br>
 
 ##### 라이브러리 설치 및 코드작성
+
 * 앱 초기실행 시 background 수신 세팅 /index.js 
 ``` javascript
 import {AppRegistry} from 'react-native';
@@ -49,9 +57,10 @@ import messaging from '@react-native-firebase/messaging';
 messaging().setBackgroundMessageHandler(async remoteMessage => {
     console.log('Message handled in the background!', remoteMessage);
 });
-<br>
 AppRegistry.registerComponent(appName, () => App);
 ```
+
+<br>
 
 * 앱 초기실행 시 foreground 수신 세팅 /app.js (tsx) 
 ``` javascript
@@ -80,7 +89,9 @@ function App(): JSX.Element {
 
 export default App;
 ```
+
 <br>
+
 * foreground 수신을 위한 라이브러리 사용 함수 src/lib/pushNoti.js
 ``` javascript
 import notifee, { AndroidImportance } from '@notifee/react-native';
@@ -104,7 +115,9 @@ const displayNotification = async message => {
 
 export default remoteMessage => displayNotification(remoteMessage);
 ```
+
 <br>
+
 * 디바이스 토큰 송신을 위한 함수 src/lib/setDeviceToken.js
 ``` javascript
 //------------------------------ MODULE --------------------------------
@@ -151,6 +164,8 @@ export default async function setDeviceToken(){
 	}
 }
 ```
+
+<br>
 <br>
 
 ##### 구동 테스트
