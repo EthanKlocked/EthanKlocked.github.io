@@ -24,6 +24,7 @@ tags: [react]
 
 ##### Fireabase 앱 생성 및 키 세팅
 
+* IOS/Android 각 생성 및 안내에 따라 각 JSON파일/코드세팅
 <img src="/img/posts/firebase_regi.PNG" width="70%" height="70%"> 	
 <br>
 
