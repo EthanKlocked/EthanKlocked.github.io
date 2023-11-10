@@ -37,7 +37,119 @@ tags: [react, android, ios]
 <br>
 
 ##### 라이브러리 설치 및 코드작성
+* 앱 초기실행 시 background 수신 세팅 /index.js 
+``` javascript
+import {AppRegistry} from 'react-native';
+import App from './App';
+import {name as appName} from './app.json';
+import messaging from '@react-native-firebase/messaging';
 
+// Register background handler
+messaging().setBackgroundMessageHandler(async remoteMessage => {
+    console.log('Message handled in the background!', remoteMessage);
+});
+
+AppRegistry.registerComponent(appName, () => App);
+```
+
+* 앱 초기실행 시 foreground 수신 세팅 /app.js (tsx) 
+``` javascript
+//------------------------------ MODULE --------------------------------
+import React, { useEffect } from 'react';
+import messaging from '@react-native-firebase/messaging';
+import { pushNoti } from './src/lib';
+
+//---------------------------- COMPONENT -------------------------------
+function App(): JSX.Element {
+    // Register foreground handler
+    useEffect(() => {
+        const unsubscribe = messaging().onMessage(async remoteMessage => {
+            //Alert.alert('A new FCM message arrived!', JSON.stringify(remoteMessage));
+            console.log(remoteMessage);
+            pushNoti(remoteMessage); 
+        });
+        return unsubscribe;
+    }, []);
+
+    //render
+    return (
+        ...
+    );
+}
+
+export default App;
+```
+
+* foreground 수신을 위한 라이브러리 사용 함수 src/lib/pushNoti.js
+``` javascript
+import notifee, { AndroidImportance } from '@notifee/react-native';
+
+const displayNotification = async message => {
+    const channelAnoucement = await notifee.createChannel({
+        id: 'default',
+        name: '시분',
+        importance: AndroidImportance.HIGH,
+    });
+
+    await notifee.displayNotification({
+        title: message.data?.title || message.notification?.title || 'none message',
+        body: message.data?.body || message.notification?.title || 'none message',
+        android: {
+            channelId: channelAnoucement,
+            smallIcon: 'ic_launcher'
+        },
+    });
+};
+
+export default remoteMessage => displayNotification(remoteMessage);
+```
+
+* 디바이스 토큰 송신을 위한 함수 src/lib/setDeviceToken.js
+``` javascript
+//------------------------------ MODULE --------------------------------
+import messaging from '@react-native-firebase/messaging';
+import { apiCall } from '@/lib';
+import { Platform } from 'react-native';
+import { requestNotifications } from "react-native-permissions";
+
+//----------------------------- FUNCTION -------------------------------
+export default async function setDeviceToken(){
+	//permission for device token 
+	//ANDROID : authorized default for android
+	//IOS : including push permission 
+  	const authStatus = await messaging().requestPermission();
+  	const enabled = (
+		authStatus === messaging.AuthorizationStatus.AUTHORIZED ||
+		authStatus === messaging.AuthorizationStatus.PROVISIONAL
+  	);
+
+	//push permission for android
+	if (Platform.OS == "android") requestNotifications(["alert", "sound"]);
+
+	//set device code in server 
+	const headers = {"Authorization" : "access"};
+  	if(enabled) {
+		await messaging()
+			.getToken()
+			.then(fcmToken => {
+				const params = {"mb_device_token" : fcmToken};
+				apiCall.post(`/user/me`, {...params}, {headers})
+					.then((r) => {
+						if(r.data.result != "000" && r.data.result != "001") console.log(r.data); //api error
+					})
+					.catch((e) => console.log(e)); //network error
+			})
+			.catch(e => console.log('error: ', e));
+  	}else{
+		const params = {"mb_device_token" : ''}; //make token empty
+		apiCall.post(`/user/me`, {...params}, {headers})
+			.then((r) => {
+				if(r.data.result != "000" && r.data.result != "001") console.log(r.data); //api error
+			})
+			.catch((e) => console.log(e)); //network error
+	}
+}
+```
 <br>
 
 ##### 구동 테스트
