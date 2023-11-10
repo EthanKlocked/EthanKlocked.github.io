@@ -4,7 +4,7 @@ title: "앱 푸시알림 연동"
 subtitle: "Firebase / Notification"
 date: 2023-11-08 14:55:23 -0400
 background: '/img/posts/react_bg3.jpg'
-tags: [react]
+tags: [react, android, ios]
 ---
 
 ### 기능 설명
